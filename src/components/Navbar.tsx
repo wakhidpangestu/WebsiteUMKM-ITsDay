@@ -28,11 +28,20 @@ export default function Navbar({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SA</span>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center">
+              <img
+                src="/logo-light.png"
+                alt="Logo"
+                className="w-6 h-6 object-contain dark:hidden"
+              />
+              <img
+                src="/logo.png"
+                alt="Logo"
+                className="w-6 h-6 object-contain hidden dark:block"
+              />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                Siomay Alek
+                Tong Hee Love
               </span>
             </div>
 
@@ -60,12 +69,13 @@ export default function Navbar({
             {/* Theme Switcher */}
             <div className="flex items-center space-x-4">
               <ThemeSwitcher />
-              <Button
+                <Button
                 size="sm"
                 className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg"
-              >
+                onClick={() => onSectionChange("pesan")}
+                >
                 Pesan Sekarang
-              </Button>
+                </Button>
             </div>
           </div>
         </div>

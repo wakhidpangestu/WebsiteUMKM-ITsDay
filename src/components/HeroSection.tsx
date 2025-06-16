@@ -19,11 +19,11 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  title = "Siomay Alek",
+  title = "Tong Hee Love",
   tagline = "Siomay Autentik Khas Bandung dengan Cita Rasa Juara",
   ctaText = "Pesan Sekarang",
   ctaLink = "#order",
-  backgroundImage = "https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=1200&q=80",
+  backgroundImage = "/home.jpg",
   sellingPoints = [
     {
       icon: <Star className="h-5 w-5 text-yellow-400" />,
@@ -33,7 +33,7 @@ export default function HeroSection({
     {
       icon: <MapPin className="h-5 w-5 text-red-500" />,
       title: "Asli Bandung",
-      description: "Resep tradisional turun temurun sejak 1995",
+      description: "Resep tradisional turun temurun sejak 1998",
     },
   ],
 }: HeroSectionProps) {
@@ -67,7 +67,7 @@ export default function HeroSection({
           className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
           onClick={() =>
             window.open(
-              `https://wa.me/6281380319934?text=Halo, saya ingin memesan siomay dari Siomay Alek`,
+              `https://wa.me/6281282829139?text=Halo, saya ingin memesan siomay dari Siomay Alek`,
               "_blank",
             )
           }

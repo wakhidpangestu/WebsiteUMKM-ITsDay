@@ -101,10 +101,10 @@
   }
 }
 
-/* Desktop navbar spacing */
+/* Desktop navbar spacing - removed padding to eliminate gap */
 @media (min-width: 769px) {
   body {
-    padding-top: 80px;
+    padding-top: 0;
   }
 }
 

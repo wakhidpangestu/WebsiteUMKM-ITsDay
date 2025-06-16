@@ -18,6 +18,7 @@ interface MenuItem {
 
 interface MenuSectionProps {
   menuItems?: MenuItem[];
+  
 }
 
 const defaultMenuItems: MenuItem[] = [
@@ -85,7 +86,7 @@ const defaultMenuItems: MenuItem[] = [
 ];
 
 export default function MenuSection({
-  menuItems = defaultMenuItems,
+  menuItems = defaultMenuItems, 
 }: MenuSectionProps) {
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("id-ID", {
