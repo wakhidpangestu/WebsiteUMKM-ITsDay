@@ -64,7 +64,7 @@ export default function HeroSection({
 
         <Button
           size="lg"
-          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
+          className="bg-[#FE9100] hover:bg-[#e07f00] text-white px-8 py-6 text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
           onClick={() =>
             window.open(
               `https://wa.me/6281282829139?text=Halo, saya ingin memesan siomay dari Siomay Alek`,

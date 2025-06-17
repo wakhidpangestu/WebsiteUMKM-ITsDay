@@ -75,7 +75,7 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50/50 via-background to-emerald-50/30 dark:from-green-950/20 dark:via-background dark:to-emerald-950/10">
+    <div className="min-h-screen bg-gradient-to-br from-[#FE9100]/50 via-background to-orange-50/30 dark:from-[#FE9100]/20 dark:via-background dark:to-orange-950/10">
       <Navbar activeSection={activeSection} onSectionChange={scrollToSection} />
 
       <main>

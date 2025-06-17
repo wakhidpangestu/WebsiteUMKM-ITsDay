@@ -49,7 +49,7 @@ const PromotionCard = ({
 );
 
 const PromotionSection = () => (
-  <section className="w-full py-16 px-4 md:px-8 bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-black">
+  <section className="w-full py-16 px-4 md:px-8 bg-gradient-to-b from-[#FE9100]/10 to-white dark:from-[#FE9100]/30 dark:to-black">
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Promo Spesial</h2>
@@ -62,7 +62,7 @@ const PromotionSection = () => (
           title="Gratis Ongkir"
           description="Pesan di atas Rp 100.000 dan dapatkan gratis ongkir ke rumah Anda. Berlaku untuk wilayah Bandung."
           icon={<Truck className="h-10 w-10" />}
-          className="border-l-4 border-l-green-500 hover:border-l-green-400 transition-colors"
+          className="border-l-4 border-l-[#FE9100] hover:border-l-orange-400 transition-colors"
         />
         <PromotionCard
           title="Spesial Akhir Pekan"
@@ -82,7 +82,7 @@ const PromotionSection = () => (
       <div className="mt-12 text-center">
         <Button
           size="lg"
-          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg"
+          className="bg-gradient-to-r from-[#FE9100] to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white shadow-lg"
           onClick={() =>
             window.open(
               `https://wa.me/6281282829139?text=Halo, saya ingin mengetahui semua promo yang tersedia di Siomay Alek`,

@@ -1,6 +1,7 @@
 import { TempoInit } from "@/components/tempo-init";
 import { ClientThemeProvider } from "../components/ClientThemeProvider";
 import { Inter } from "next/font/google";
+import UserCursor from '@/components/UserCursor';
 import Script from "next/script";
 import "./globals.css";
 
@@ -57,11 +58,12 @@ export default function RootLayout({
           href="#"
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} cursor-none`}>
         <ClientThemeProvider>
           {children}
           <TempoInit />
         </ClientThemeProvider>
+        <UserCursor />
       </body>
     </html>
   );
