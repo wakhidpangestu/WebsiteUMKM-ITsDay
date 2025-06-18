@@ -69,7 +69,7 @@
       <strong>Next.js</strong>
     </td>
     <td align="center" valign="middle">
-      <img src="https://tailwindcss.com/_next/static/media/mark.b1c7a1b9.svg" width="40" /><br/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="40" /><br/>
       <strong>Tailwind CSS</strong>
     </td>
     <td align="center" valign="middle">
