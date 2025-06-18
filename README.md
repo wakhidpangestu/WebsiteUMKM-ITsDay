@@ -69,6 +69,10 @@
       <strong>Next.js</strong>
     </td>
     <td align="center" valign="middle">
+        <img src="https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" width="40" /><br/>
+        <strong>Vercel</strong>
+    </td>
+    <td align="center" valign="middle">
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="40" /><br/>
       <strong>Tailwind CSS</strong>
     </td>
