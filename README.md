@@ -17,7 +17,7 @@
 
 ![Promo Tong Hee Love](./public/poster-somay.png)
 
-> 🌐 **Live Website:** _→ [tongheelove.vercel.app](https://www.tongheelove.verce.app/)_
+> 🌐 **Live Website:** _→ [tongheelove.vercel.app](https://tongheelove.verce.app/)_
 
 ---
 
