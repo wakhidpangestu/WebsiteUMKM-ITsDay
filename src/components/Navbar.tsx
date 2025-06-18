@@ -22,12 +22,12 @@ export default function Navbar({
 
   return (
     <>
-      {/* Desktop Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 dark:bg-black/10 backdrop-blur-md border-b border-white/20 dark:border-white/10 hidden md:block">
+      {/* Desktop & Tablet Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 dark:bg-black/10 backdrop-blur-md border-b border-white/20 dark:border-white/10 hidden md:flex">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 justify-center md:justify-start">
               <div className="w-10 h-10 rounded-full flex items-center justify-center">
                 <img
                   src="/logo-light.png"
@@ -46,14 +46,14 @@ export default function Navbar({
             </div>
 
             {/* Navigation Links */}
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center justify-center md:justify-start space-x-4 md:space-x-8 mt-2 md:mt-0">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
                   <button
                     key={item.id}
                     onClick={() => onSectionChange(item.id)}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
+                    className={`flex items-center space-x-2 px-3 md:px-4 py-2 rounded-full transition-all duration-300 ${
                       activeSection === item.id
                         ? "bg-[#FE9100]/20 text-[#FE9100] shadow-lg"
                         : "text-foreground/80 hover:text-foreground hover:bg-white/10 dark:hover:bg-white/5"
@@ -66,8 +66,8 @@ export default function Navbar({
               })}
             </div>
 
-            {/* Theme Switcher */}
-            <div className="flex items-center space-x-4">
+            {/* Theme Switcher & CTA */}
+            <div className="flex items-center justify-center md:justify-end space-x-2 md:space-x-4 mt-2 md:mt-0">
               <ThemeSwitcher />
               <Button
                 size="sm"
