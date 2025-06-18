@@ -15,8 +15,8 @@ interface PromotionCardProps {
 }
 
 const PromotionCard = ({
-  title = "Penawaran Spesial",
-  description = "Dapatkan promo menarik untuk produk kami",
+  title = "Promo Spesial",
+  description = "Nikmati siomay asli Bandung dari Tong Hee Love – enak, terjangkau, dan penuh kejutan! Cek promo menarik kami di bawah ini:",
   discount,
   icon,
   className = "",
@@ -54,26 +54,26 @@ const PromotionSection = () => (
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Promo Spesial</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Nikmati penawaran eksklusif dan diskon untuk siomay asli Indonesia kami. Promo terbatas yang tidak boleh Anda lewatkan!
+          Nikmati siomay asli Bandung dari Tong Hee Love – enak, terjangkau, dan penuh kejutan! Cek promo menarik kami di bawah ini:
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <PromotionCard
-          title="Gratis Ongkir"
-          description="Pesan di atas Rp 100.000 dan dapatkan gratis ongkir ke rumah Anda. Berlaku untuk wilayah Bandung."
+          title="Free Ongkir Suka-Suka"
+          description={"Ada pesanan? Bisa dapet ongkir gratis, tergantung yang ngasih 😉\nNggak ada minimal order, pokoknya tanya aja dulu! Berlaku untuk sekitar Depok & sekitarnya."}
           icon={<Truck className="h-10 w-10" />}
           className="border-l-4 border-l-[#FE9100] hover:border-l-orange-400 transition-colors"
         />
         <PromotionCard
-          title="Spesial Akhir Pekan"
-          description="Dapatkan diskon 50% untuk pesanan kedua setiap akhir pekan. Cocok untuk kumpul keluarga dan pesta akhir pekan!"
+          title="Diskon Spesial Akhir Pekan"
+          description={"Pesan porsi ketiga di akhir pekan dan dapetin potongan 50%!\nCocok buat kumpul bareng keluarga sambil nikmatin siomay pare, kol, tahu, dll."}
           discount="50% OFF"
           icon={<Percent className="h-10 w-10" />}
           className="border-l-4 border-l-red-500 hover:border-l-red-400 transition-colors"
         />
         <PromotionCard
-          title="Happy Hour"
-          description="Pesan antara pukul 14.00-17.00 dan dapatkan diskon 25% untuk semua menu. Cocok untuk ngemil sore Anda!"
+          title="Happy Hour Ngemil Sore"
+          description={"Setiap hari dari jam 14.00 – 17.00, semua menu diskon 25%!\nPas banget buat ngemil sore, harga mulai dari 2 ribu aja per biji!"}
           discount="25% OFF"
           icon={<Clock className="h-10 w-10" />}
           className="border-l-4 border-l-blue-500 hover:border-l-blue-400 transition-colors"

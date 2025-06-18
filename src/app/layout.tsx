@@ -1,28 +1,27 @@
-import { TempoInit } from "@/components/tempo-init";
 import { ClientThemeProvider } from "../components/ClientThemeProvider";
 import { Inter } from "next/font/google";
-import UserCursor from '@/components/UserCursor';
+import UserCursor from "@/components/UserCursor";
 import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tong Hee Love - Siomay Indonesia Asli",
+  title: "Tong Hee Love | Siomay Bandung Legendaris - Fresh, Lezat, & Asli!",
   description:
-    "Rasakan cita rasa asli siomay Indonesia di Tong Hee Love. Bahan segar, resep tradisional, dan pemesanan online yang mudah. Gratis ongkir dengan diskon spesial hingga 50%.",
+    "Nikmati siomay Bandung legendaris dengan cita rasa otentik, bumbu kacang spesial, dan bahan segar setiap hari. Pesan online, gratis ongkir, diskon spesial, dan pengalaman kuliner yang tak terlupakan hanya di Tong Hee Love!",
   keywords:
-    "siomay, makanan Indonesia, kuliner asli, pesan online, antar makanan, resep tradisional, UMKM, usaha kecil",
+    "siomay, siomay bandung, siomay asli, siomay enak, siomay legendaris, kuliner bandung, makanan tradisional, pesan siomay, siomay online, UMKM, halal, bumbu kacang, promo siomay, gratis ongkir",
   openGraph: {
-    title: "Tong Hee Love - Siomay Indonesia Asli",
+    title: "Tong Hee Love | Siomay Bandung Legendaris - Fresh, Lezat, & Asli!",
     description:
-      "Pesan siomay Indonesia asli dan segar secara online. Resep tradisional dengan kemudahan modern.",
+      "Nikmati siomay Bandung legendaris dengan cita rasa otentik, bumbu kacang spesial, dan bahan segar setiap hari. Pesan online, gratis ongkir, diskon spesial, dan pengalaman kuliner yang tak terlupakan hanya di Tong Hee Love!",
     images: [
       {
         url: "/home.jpg",
         width: 1200,
         height: 630,
-        alt: "Siomay Indonesia Lezat - Tong Hee Love",
+        alt: "Siomay Bandung Legendaris - Tong Hee Love",
       },
     ],
     type: "website",
@@ -30,11 +29,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tong Hee Love - Siomay Indonesia Asli",
+    title: "Tong Hee Love | Siomay Bandung Legendaris - Fresh, Lezat, & Asli!",
     description:
-      "Pesan siomay Indonesia asli dan segar secara online. Resep tradisional dengan kemudahan modern.",
+      "Nikmati siomay Bandung legendaris dengan cita rasa otentik, bumbu kacang spesial, dan bahan segar setiap hari. Pesan online, gratis ongkir, diskon spesial, dan pengalaman kuliner yang tak terlupakan hanya di Tong Hee Love!",
     images: [
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=1200&q=80",
+      "/home.jpg",
     ],
   },
   robots: {
@@ -52,16 +51,12 @@ export default function RootLayout({
     <html lang="id" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#22c55e" />
-        <link
-          rel="canonical"
-          href="#"
-        />
+        <meta name="theme-color" content="#FE9100" />
+        <link rel="canonical" href="#" />
       </head>
       <body className={`${inter.className} cursor-none`}>
         <ClientThemeProvider>
           {children}
-          <TempoInit />
         </ClientThemeProvider>
         <UserCursor />
       </body>

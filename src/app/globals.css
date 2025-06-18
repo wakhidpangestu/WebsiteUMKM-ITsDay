@@ -57,23 +57,17 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
 
-body {
-  cursor: none;
-}
-
-
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    cursor: none;
   }
 }
 
-/* Glassmorphism utilities */
 @layer utilities {
   .glass {
     @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;

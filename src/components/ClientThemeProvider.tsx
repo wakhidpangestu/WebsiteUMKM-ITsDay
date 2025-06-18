@@ -2,11 +2,11 @@
 
 import { ThemeProvider } from "next-themes";
 
-export function ClientThemeProvider({
-  children,
-}: {
+interface ClientThemeProviderProps {
   children: React.ReactNode;
-}) {
+}
+
+export function ClientThemeProvider({ children }: ClientThemeProviderProps) {
   return (
     <ThemeProvider
       attribute="class"

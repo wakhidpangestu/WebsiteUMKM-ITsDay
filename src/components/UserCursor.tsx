@@ -2,7 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 
-type Position = { x: number; y: number };
+// Types
+interface Position {
+  x: number;
+  y: number;
+}
 
 const username = 'Tong Hee Love';
 
@@ -12,6 +16,7 @@ const UserCursor: React.FC = () => {
   const [loopIndex, setLoopIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // default: false
 
   // Mobile detection
   useEffect(() => {
@@ -21,15 +26,31 @@ const UserCursor: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Mouse position tracking
+  // Mouse position tracking & auto-hide
   useEffect(() => {
     if (isMobile) return;
     const handleMouseMove = (e: MouseEvent) => {
+      // Sembunyikan cursor jika mouse di atas iframe (misal Google Maps)
+      const target = e.target as HTMLElement;
+      if (target && (target.tagName === 'IFRAME' || target.closest('iframe'))) {
+        setIsVisible(false);
+        return;
+      }
       setPosition({ x: e.clientX, y: e.clientY });
+      setIsVisible(true);
     };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    const handleDocumentMouseLeave = (e: MouseEvent) => {
+      // Hide only if leaving the document (not just a child element)
+      if (!e.relatedTarget) {
+        setIsVisible(false);
+      }
+    };
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleDocumentMouseLeave);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleDocumentMouseLeave);
+    };
   }, [isMobile]);
 
   // Hover tracking
@@ -43,7 +64,6 @@ const UserCursor: React.FC = () => {
         setIsHovering(false);
       }
     };
-
     window.addEventListener('mouseover', handleMouseOver);
     return () => window.removeEventListener('mouseover', handleMouseOver);
   }, [isMobile]);
@@ -56,7 +76,6 @@ const UserCursor: React.FC = () => {
     const interval = setInterval(() => {
       setTypedName(username.slice(0, index + 1));
       index++;
-
       if (index > username.length) {
         clearInterval(interval);
         setTimeout(() => {
@@ -65,11 +84,10 @@ const UserCursor: React.FC = () => {
         }, 15000);
       }
     }, typingSpeed);
-
     return () => clearInterval(interval);
   }, [loopIndex, isMobile]);
 
-  if (isMobile) return null;
+  if (isMobile || !isVisible) return null;
 
   return (
     <div
@@ -109,6 +127,9 @@ const UserCursor: React.FC = () => {
               background: 'linear-gradient(90deg, #FEC90B, #FE9100)',
               fontFamily: 'monospace',
               whiteSpace: 'nowrap',
+              position: 'relative',
+              top: '8px', // geser teks ke bawah
+              left: '6px', // geser teks sedikit ke kanan
             }}
           >
             {typedName}

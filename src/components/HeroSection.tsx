@@ -68,7 +68,7 @@ export default function HeroSection({
           onClick={() =>
             window.open(
               `https://wa.me/6281282829139?text=Halo, saya ingin memesan siomay dari Siomay Alek`,
-              "_blank",
+              "_blank"
             )
           }
         >
