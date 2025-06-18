@@ -91,7 +91,7 @@
       <strong>JavaScript</strong>
     </td>
     <td align="center" valign="middle">
-      <img src="https://api.iconify.design/logos/lodash-icon.svg" width="40" /><br/>
+      <img src="https://raw.githubusercontent.com/lodash/lodash/master/lodash.svg" width="40" /><br/>
       <strong>Lodash</strong>
     </td>
     <td align="center" valign="middle">
