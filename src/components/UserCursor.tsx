@@ -16,19 +16,23 @@ const UserCursor: React.FC = () => {
   const [loopIndex, setLoopIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const [isVisible, setIsVisible] = useState(false); // default: false
 
-  // Mobile detection
+  // Mobile & Tablet detection
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth < 768);
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+    };
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+    return () => window.removeEventListener('resize', checkDevice);
   }, []);
 
   // Mouse position tracking & auto-hide
   useEffect(() => {
-    if (isMobile) return;
+    if (isMobile || isTablet) return;
     const handleMouseMove = (e: MouseEvent) => {
       // Sembunyikan cursor jika mouse di atas iframe (misal Google Maps)
       const target = e.target as HTMLElement;
@@ -51,11 +55,11 @@ const UserCursor: React.FC = () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleDocumentMouseLeave);
     };
-  }, [isMobile]);
+  }, [isMobile, isTablet]);
 
   // Hover tracking
   useEffect(() => {
-    if (isMobile) return;
+    if (isMobile || isTablet) return;
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (target.closest('button, a, input, textarea, select, label')) {
@@ -66,11 +70,11 @@ const UserCursor: React.FC = () => {
     };
     window.addEventListener('mouseover', handleMouseOver);
     return () => window.removeEventListener('mouseover', handleMouseOver);
-  }, [isMobile]);
+  }, [isMobile, isTablet]);
 
   // Typing animation
   useEffect(() => {
-    if (isMobile) return;
+    if (isMobile || isTablet) return;
     let index = 0;
     const typingSpeed = 100;
     const interval = setInterval(() => {
@@ -85,9 +89,9 @@ const UserCursor: React.FC = () => {
       }
     }, typingSpeed);
     return () => clearInterval(interval);
-  }, [loopIndex, isMobile]);
+  }, [loopIndex, isMobile, isTablet]);
 
-  if (isMobile || !isVisible) return null;
+  if (isMobile || isTablet || !isVisible) return null;
 
   return (
     <div
