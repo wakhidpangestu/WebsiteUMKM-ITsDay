@@ -69,7 +69,7 @@
       <strong>Next.js</strong>
     </td>
     <td align="center" valign="middle">
-      <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-mark.svg" width="40" /><br/>
+      <img src="https://tailwindcss.com/_next/static/media/mark.b1c7a1b9.svg" width="40" /><br/>
       <strong>Tailwind CSS</strong>
     </td>
     <td align="center" valign="middle">
@@ -91,7 +91,7 @@
       <strong>JavaScript</strong>
     </td>
     <td align="center" valign="middle">
-      <img src="https://cdn.jsdelivr.net/gh/lodash/lodash@4.17.21/lodash.svg" width="40" /><br/>
+      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/lodash.svg" width="40" /><br/>
       <strong>Lodash</strong>
     </td>
     <td align="center" valign="middle">
