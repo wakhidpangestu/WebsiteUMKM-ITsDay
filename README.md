@@ -73,11 +73,11 @@
       <strong>Tailwind CSS</strong>
     </td>
     <td align="center" valign="middle">
-      <img src="https://api.iconify.design/logos/shadcn-ui.svg" width="40" /><br/>
+      <img src="https://raw.githubusercontent.com/shadcn/ui/main/apps/www/public/favicon.ico" width="40" /><br/>
       <strong>shadcn/ui</strong>
     </td>
     <td align="center" valign="middle">
-      <img src="https://api.iconify.design/logos/radix-ui.svg" width="40" /><br/>
+      <img src="https://avatars.githubusercontent.com/u/75042453?s=200&v=4" width="40" /><br/>
       <strong>Radix UI</strong>
     </td>
   </tr>
@@ -114,3 +114,4 @@ git clone https://github.com/username/tong-hee-love.git
 cd tong-hee-love
 npm install
 npm run dev
+```
