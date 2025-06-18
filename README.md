@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Next.js-14.2.23-blue?logo=nextdotjs" />
   <img src="https://img.shields.io/badge/TailwindCSS-Styled-38B2AC?logo=tailwindcss" />
   <img src="https://img.shields.io/badge/shadcn/UI-Modern-black?logo=vercel" />
-  <img src="https://img.shields.io/badge/Status-Development-orange" />
+  <img src="https://img.shields.io/badge/Status-Publish-green" />
 </p>
 
 ---
