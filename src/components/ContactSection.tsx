@@ -208,6 +208,18 @@ const ContactSection = memo(function ContactSection({
             Copyright by{" "}
             <span className="underline hover:text-primary">Team JabarMikro</span>
           </p>
+
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <span className="text-xs text-muted-foreground">Sponsored by</span>
+            <Image
+              src="/ITs-logo.png"
+              alt="ITs Logo"
+              width={120}
+              height={40}
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
