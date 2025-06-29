@@ -23,7 +23,7 @@
 
   <div align="center">
     <a href="https://tongheelove.vercel.app" target="_blank">
-      <img src="https://i.pinimg.com/736x/a0/11/f9/a011f9076f163f3c47dfd6928ff321ce.jpg" alt="Tong Hee Love Preview" width="80%" />
+      <img src="https://i.pinimg.com/736x/c6/6a/12/c66a12ad0933a44d62d8f68916ea811a.jpg" alt="Tong Hee Love Preview" width="80%" />
       <br/><br/>
       <strong>🔗 Kunjungi: https://tongheelove.vercel.app</strong>
     </a>
@@ -60,8 +60,9 @@
 
   - ⚡ WhatsApp CTA langsung ke penjual
   - 🌙 Mode Terang & Gelap (Dark/Light Mode)
+  - 📌 Tentang Tong Hee Love
   - 📷 Galeri produk responsif
-  - 🧾 Testimoni pelanggan
+  - 🧾 Promo menarik
   - 📍 Embed Google Maps
   - 📱 Mobile-first modern UI
 
